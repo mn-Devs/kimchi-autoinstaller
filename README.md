@@ -1,2 +1,2 @@
 # kimchi-autoinstaller
-this script automaticaly installs wok kimchi and gigerbase 
+this script automaticaly installs wok kimchi and gingerbase 
