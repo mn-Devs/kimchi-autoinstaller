@@ -19,8 +19,10 @@ echo " / __ \|  |  /|  | (  <_> ) |  |   |  \\___ \  |  |  / __ \|  |_|  |__"
 echo "(____  /____/ |__|  \____/  |__|___|  /____  > |__| (____  /____/____/"
 echo "     \/                             \/     \/            \/           "
 echo ""
+echo "v1"
 echo ""
-sudo apt update && sudo apt upgrade -y
+sudo apt update -f
+sudo apt upgrade -f
 sudo apt install qemu qemu-kvm libvirt-bin python-paramiko python-pil novnc python-libvirt python-ethtool python-ipaddr python-guestfs libguestfs-tools spice-html5 spice-html5 python-magic keyutils libnfsidmap2 libtirpc1 nfs-common rpcbind python-configobj python-parted -y
 sudo add-apt-repository universe
 sudo apt install -f -y
