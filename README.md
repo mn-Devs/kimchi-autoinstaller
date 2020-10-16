@@ -17,7 +17,7 @@ sudo chmod +x install.sh
 run the script
 
 ``
-bash install.sh
+sudo bash install.sh
 ``
 
 done!
