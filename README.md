@@ -13,6 +13,7 @@ give the script read and write acces
 ``
 sudo chmod +x install.sh
 ``
+
 run the script
 
 ``
