@@ -19,6 +19,7 @@ run the script
 ``
 bash install.sh
 ``
+
 done!
 
 **Please let us know if you have any issues**
