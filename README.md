@@ -1,5 +1,6 @@
 # kimchi-autoinstaller
-this script automaticaly installs wok kimchi and gingerbase
+this script automaticaly installs wok, kimchi and gingerbase
+Tested on ubuntu 18.04, should work on 18.04 and up
 
 ## How to run
 Download the file
