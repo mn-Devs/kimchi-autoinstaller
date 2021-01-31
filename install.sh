@@ -25,47 +25,26 @@ echo ""
 sudo apt-get update;
 
 sudo apt-get full-upgrade -y;
-
 sudo apt install qemu qemu-kvm libvirt-bin python-paramiko python-pil novnc python-libvirt python-ethtool python-ipaddr python-guestfs libguestfs-tools spice-html5 spice-html5 python-magic keyutils libnfsidmap2 libtirpc1 nfs-common rpcbind python-configobj python-parted -y;
-
 sudo apt install nginx -y;
-
 sudo wget https://github.com/kimchi-project/kimchi/releases/download/2.5.0/wok-2.5.0-0.noarch.deb;
-
 sudo wget https://github.com/kimchi-project/kimchi/releases/download/2.5.0/kimchi-2.5.0-0.noarch.deb;
-
 sudo wget http://kimchi-project.github.io/gingerbase/downloads/latest/ginger-base.noarch.deb;
-
 sudo wget http://kimchi-project.github.io/ginger/downloads/latest/ginger.noarch.deb;
-
 sudo dpkg -i wok-2.5.0-0.noarch.deb;
-
 sudo apt install -f -y;
-
 sudo dpkg --ignore-depends=python-imaging -i kimchi-2.5.0-0.noarch.deb;
-
 sudo sed -i 's/, python-imaging//g' /var/lib/dpkg/status;
-
 sudo apt install -f -y;
-
 sudo dpkg -i ginger-base.noarch.deb;
-
 sudo apt-get install -f -y;
-
 sudo dpkg -i ginger.noarch.deb;
-
 sudo apt-get install -f -y;
-
 sudo ufw disable;
-
 sudo apt-get remove ufw -y;
-
-wget -q https://raw.githubusercontent.com/kimchi-project/kimchi/1ec059af4040c50b1a7b9a34253510a46ca09d3b/model/templates.py -O /usr/lib/python2.7/dist-packages/wok/plugins/kimchi/model/templates.py;
-
+sudo wget -q https://raw.githubusercontent.com/kimchi-project/kimchi/1ec059af4040c50b1a7b9a34253510a46ca09d3b/model/templates.py -O /usr/lib/python2.7/dist-packages/wok/plugins/kimchi/model/templates.py;
 sudo rm /etc/kimchi/distros.d/ubuntu.json;
-
 sudo chmod 777 /etc/kimchi/distros.d/;
-
 sudo cat > /etc/kimchi/distros.d/ubuntu.json << EOF
 [
     {
@@ -105,9 +84,7 @@ sudo cat > /etc/kimchi/distros.d/ubuntu.json << EOF
     }
 ]
 EOF;
-
 sudo systemctl restart wokd;
-
 echo ""
 echo ""
 echo "DONE!"
