@@ -39,7 +39,6 @@ sudo dpkg -i ginger-base.noarch.deb
 sudo apt-get install -f -y
 sudo dpkg -i ginger.noarch.deb
 sudo apt-get install -f -y
-sudo ufw disable
 sudo apt-get remove ufw -y
 sudo wget -q https://raw.githubusercontent.com/kimchi-project/kimchi/1ec059af4040c50b1a7b9a34253510a46ca09d3b/model/templates.py -O /usr/lib/python2.7/dist-packages/wok/plugins/kimchi/model/templates.py
 sudo rm /etc/kimchi/distros.d/ubuntu.json
